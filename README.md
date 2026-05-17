@@ -1,51 +1,56 @@
 # 🚀 Express Routing Project
 
-A beginner-friendly **Node.js + Express.js** project that demonstrates how routing works in Express.
+A beginner-friendly **Node.js + Express.js** application that demonstrates how routing works in a backend server.
 
-This project covers serving HTML pages, handling redirects, and displaying a custom **404 error page**.
+This project showcases how to serve HTML pages, handle redirects, and display a custom **404 error page** using clean and structured routing logic.
 
 ---
 
 ## 📌 Project Overview
 
-This application includes multiple routes such as **Home**, **About**, and **Contact** pages.  
+This application includes multiple routes such as:
+
+- 🏠 Home Page
+- 📄 About Page
+- 📞 Contact Page
+
 It also demonstrates:
 
 - Route redirection
-- Handling invalid routes
+- Handling unknown routes
 - Sending proper HTTP status codes
 
 ---
 
 ## ✨ Features
 
-- 🔹 Basic routing with Express.js
-- 🔹 Multiple pages (Home, About, Contact)
+- 🔹 Basic routing using Express.js
+- 🔹 Serving static HTML pages
 - 🔹 Route redirection (`/index → /`)
-- 🔹 Custom 404 error page
-- 🔹 Proper status code handling
-- 🔹 Clean and beginner-friendly structure
+- 🔹 Custom 404 error handling
+- 🔹 Proper HTTP status codes (200, 302, 404)
+- 🔹 Beginner-friendly project structure
 
 ---
 
 ## 🛣️ Routes
 
-| Route        | Description                |
-|-------------|--------------------------|
-| `/`         | Home Page                |
-| `/about`    | About Page               |
-| `/contact`  | Contact Page             |
-| `/index`    | Redirects to Home Page   |
-| `*`         | Custom 404 Page          |
+| Route        | Method | Description                |
+|-------------|--------|----------------------------|
+| `/`         | GET    | Home Page                  |
+| `/about`    | GET    | About Page                 |
+| `/contact`  | GET    | Contact Page               |
+| `/index`    | GET    | Redirects to Home (`/`)    |
+| `*`         | GET    | Custom 404 Page            |
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Node.js
-- Express.js
-- JavaScript
-- HTML
+- ⚙️ Node.js
+- 🚀 Express.js
+- 💻 JavaScript (ES6)
+- 🌐 HTML5
 
 ---
 
@@ -54,53 +59,67 @@ It also demonstrates:
 ```
 project/
 │
-├── server.js
-├── home.html
-├── about.html
-├── contact.html
-├── 404.html
-├── package.json
-└── package-lock.json
+├── server.js          # Main server file
+├── home.html          # Home page
+├── about.html         # About page
+├── contact.html       # Contact page
+├── 404.html           # Custom error page
+├── package.json       # Project metadata & dependencies
+└── package-lock.json  # Dependency lock file
 ```
 
 ---
 
 ## ⚙️ How It Works
 
-1. The server is created using **Express.js**
-2. Each route serves a specific HTML file
-3. The `/index` route redirects to the Home page
-4. Any invalid route triggers a custom **404 error page**
+1. Express server is initialized in `server.js`
+2. Routes are defined using `app.get()`
+3. Each route sends an HTML file using `res.sendFile()`
+4. `/index` route uses `res.redirect()` to navigate to Home
+5. Undefined routes are handled using a wildcard (`*`) and return a custom 404 page
 
 ---
 
 ## ▶️ How to Run the Project
 
-### 1. Install dependencies
+### 1. Clone the repository
+```bash
+git clone <your-repo-link>
+cd project
+```
+
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-### 2. Start the server
+### 3. Start the server
 ```bash
 node server.js
 ```
 
-### 3. Open in browser
+### 4. Open in browser
 ```
 http://localhost:3000
 ```
 
 ---
 
-## 🎯 Why This Project Matters
+## 🎯 Learning Outcomes
 
-This project helps you:
+- Understand how routing works in Express.js
+- Learn how servers deliver HTML content
+- Handle redirects and invalid routes
+- Build a strong backend foundation for MERN stack development
 
-- Understand **Express routing fundamentals**
-- Learn how backend servers serve HTML
-- Practice **real-world routing logic**
-- Build a strong base for **MERN stack development**
+---
+
+## 🚀 Future Improvements
+
+- Add Express Router (modular routing)
+- Use template engines (EJS / Handlebars)
+- Add middleware (logging, authentication)
+- Deploy the app (Render / Railway / Vercel)
 
 ---
 
@@ -108,4 +127,4 @@ This project helps you:
 
 **Ashokkumar T**
 
-> Built while learning Node.js and Express.js 🚀
+> Built while learning backend development with Node.js & Express.js 🚀
